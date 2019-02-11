@@ -60,7 +60,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountData.cs" />
-    <Compile Include="AccountDataForContact.cs" />
     <Compile Include="ContactForm.cs" />
     <Compile Include="GroupData.cs" />
     <Compile Include="UnitTest1.cs" />

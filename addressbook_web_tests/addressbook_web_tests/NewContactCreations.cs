@@ -43,7 +43,7 @@ namespace addressbook_web_tests
         public void TheNewContactCreationsTest()
         {
             OpenHomePage();
-            Login(new AccountDataForContact("admin", "secret"));
+            Login(new AccountData("admin", "secret"));
             GoToContactsPage();
             ContactForm contact = new ContactForm("Zolotov");
             contact.Firstnameput = "Zolotov";
@@ -84,7 +84,7 @@ namespace addressbook_web_tests
             driver.FindElement(By.LinkText("add new")).Click();
         }
 
-        private void Login(AccountDataForContact account)
+        private void Login(AccountData account)
         {
             driver.FindElement(By.Name("user")).Click();
             driver.FindElement(By.Name("user")).Clear();
