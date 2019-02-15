@@ -13,16 +13,16 @@ namespace addressbook_web_tests
         [Test]
         public void TheNewContactCreationsTest()
         {
-            GoToHomePage();
-            Login(new AccountData("admin", "secret"));
-            GoToContactsPage();
+            app.Navigator.GoToHomePage();
+            app.Auth.Login(new AccountData("admin", "secret"));
+            app.contactHelper.GoToContactsPage();
             ContactForm contact = new ContactForm("Zolotov");
             contact.Firstnameput = "Zolotov";
             contact.Lastnameput = "Dmitrii";
-            FillContactForm(contact);
-            SubmitContactCreations();
-            ReturnToTheContactPage();
-            Logout();
+            app.contactHelper.FillContactForm(contact);
+            app.contactHelper.SubmitContactCreations();
+            app.contactHelper.ReturnToTheContactPage();
+            app.Auth.Logout();
         }
 
      }
